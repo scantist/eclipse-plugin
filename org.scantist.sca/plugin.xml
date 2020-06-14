@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="org.scantist.sca.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="org.scantist.sca.commands.category"
+            name="Sample Command"
+            id="org.scantist.sca.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.scantist.sca.handlers.SCAHandler"
+            commandId="org.scantist.sca.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.scantist.sca.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.scantist.sca.toolbars.sampleToolbar">
+            <command
+                  id="org.scantist.sca.toolbars.sampleCommand"
+                  commandId="org.scantist.sca.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Scantist SCA">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.scantist.sca"
+            name="Scantit SCA">
+      </category>
+      <view
+            category="org.scantist.sca"
+            class="org.scantist.sca.views.ComponentView"
+            icon="icons/sample.png"
+            id="org.scantist.sca.views.ComponentView"
+            inject="true"
+            name="SCA Component Results">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               id="org.scantist.sca.views.ComponentView"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.views.ProblemView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

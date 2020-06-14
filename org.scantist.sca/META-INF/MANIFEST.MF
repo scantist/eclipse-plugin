@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sca
+Bundle-SymbolicName: org.scantist.sca;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.scantist.sca.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console;bundle-version="3.9.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: org.scantist.sca
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ library/scantist-bom-detect.jar
+Import-Package: javax.inject
+Export-Package: com.scantist.ci

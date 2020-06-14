@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="org.scantist.sca">
+      
+   </description>
+   <feature url="features/org.scantist.sca.feature_1.0.0.202006150118.jar" id="org.scantist.sca.feature" version="1.0.0.202006150118">
+      <category name="feature"/>
+   </feature>
+   <category-def name="feature" label="feature"/>
+</site>
