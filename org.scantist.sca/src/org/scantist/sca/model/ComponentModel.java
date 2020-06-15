@@ -4,9 +4,9 @@ public class ComponentModel {
 	private final String name;
 	private final String version;
     private final String license;
-    private final int[] vulnerabilityCount;
+    private final int vulnerabilityCount;
 
-    public ComponentModel(final String name, final String version, final String license, final int[] vulnerabilityCount) {
+    public ComponentModel(final String name, final String version, final String license, final int vulnerabilityCount) {
     	this.name = name;
     	this.version = version;
         this.license = license;
@@ -21,7 +21,7 @@ public class ComponentModel {
         return license;
     }
 
-    public int[] getVulnerabilityCount() {
+    public int getVulnerabilityCount() {
         return vulnerabilityCount;
     }
 

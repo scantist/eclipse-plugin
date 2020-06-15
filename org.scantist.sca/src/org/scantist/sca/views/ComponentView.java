@@ -171,8 +171,7 @@ public class ComponentView extends ViewPart {
 					logger.info("------------");
 
 					for (ScanResultComponent c : scanResult.results.components) {
-						ComponentModel component = new ComponentModel(c.getLibrary(), c.getVersion(), c.getLicense(),
-								new int[] { c.getVulnerabilities(), 0, 0 });
+						ComponentModel component = new ComponentModel(c.getLibrary(), c.getVersion(), c.getLicense(), c.getVulnerabilities());
 						componentList.add(component);
 					}
 
