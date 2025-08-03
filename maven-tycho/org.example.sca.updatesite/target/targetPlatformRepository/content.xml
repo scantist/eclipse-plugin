@@ -158,23 +158,23 @@
         </provided>
         <provided namespace='org.eclipse.emf.ecore.generated_package' name='org.eclipse.emf.ecore_2.35.0.v20230829-0934-1' version='0.0.0'>
           <properties size='3'>
-            <property name='uri' value='http://www.eclipse.org/emf/2002/Ecore'/>
-            <property name='genModel' value='model/Ecore.genmodel'/>
             <property name='class' value='org.eclipse.emf.ecore.EcorePackage'/>
+            <property name='genModel' value='model/Ecore.genmodel'/>
+            <property name='uri' value='http://www.eclipse.org/emf/2002/Ecore'/>
           </properties>
         </provided>
         <provided namespace='org.eclipse.emf.ecore.generated_package' name='org.eclipse.emf.ecore_2.35.0.v20230829-0934-2' version='0.0.0'>
           <properties size='3'>
-            <property name='uri' value='http://www.w3.org/XML/1998/namespace'/>
-            <property name='genModel' value='model/XMLNamespace.genmodel'/>
             <property name='class' value='org.eclipse.emf.ecore.xml.namespace.XMLNamespacePackage'/>
+            <property name='genModel' value='model/XMLNamespace.genmodel'/>
+            <property name='uri' value='http://www.w3.org/XML/1998/namespace'/>
           </properties>
         </provided>
         <provided namespace='org.eclipse.emf.ecore.generated_package' name='org.eclipse.emf.ecore_2.35.0.v20230829-0934-3' version='0.0.0'>
           <properties size='3'>
-            <property name='uri' value='http://www.eclipse.org/emf/2003/XMLType'/>
-            <property name='genModel' value='model/XMLType.genmodel'/>
             <property name='class' value='org.eclipse.emf.ecore.xml.type.XMLTypePackage'/>
+            <property name='genModel' value='model/XMLType.genmodel'/>
+            <property name='uri' value='http://www.eclipse.org/emf/2003/XMLType'/>
           </properties>
         </provided>
         <provided namespace='org.eclipse.emf.ecore.dynamic_package' name='org.eclipse.emf.ecore_2.35.0.v20230829-0934-4' version='0.0.0'>
@@ -1290,6 +1290,40 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.example.sca.feature.feature.group' version='0.0.9.202508030827' singleton='false'>
+      <update id='org.example.sca.feature.feature.group' range='[0.0.0,0.0.9.202508030827)' severity='0'/>
+      <properties size='9'>
+        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='SCA Eclipse Plugin Feature - provides SCA scanning capabilities for Eclipse IDE'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.org/description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.example'/>
+        <property name='maven-artifactId' value='org.example.sca.feature'/>
+        <property name='maven-version' value='0.0.9-SNAPSHOT'/>
+        <property name='maven-type' value='eclipse-feature'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.group' version='0.0.9.202508030827'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' range='[0.0.9.202508030827,0.0.9.202508030827]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.jar' range='[0.0.9.202508030827,0.0.9.202508030827]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.example.org/license' url='http://www.example.org/license'>
+          This software is provided under the terms of the Eclipse Public License v2.0
+        </license>
+      </licenses>
+      <copyright uri='http://www.example.org/copyright' url='http://www.example.org/copyright'>
+        Copyright (c) 2024 Example Organization. All rights reserved.
+      </copyright>
+    </unit>
     <unit id='org.eclipse.e4.ui.css.swt' version='0.15.200.v20231025-0632' generation='2'>
       <update id='org.eclipse.e4.ui.css.swt' range='[0.0.0,0.15.200.v20231025-0632)' severity='0'/>
       <properties size='9'>
@@ -1355,6 +1389,45 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.example.sca.feature.feature.jar' version='0.0.9.202508030827'>
+      <properties size='8'>
+        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='SCA Eclipse Plugin Feature - provides SCA scanning capabilities for Eclipse IDE'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.org/description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
+        <property name='maven-groupId' value='org.example'/>
+        <property name='maven-artifactId' value='org.example.sca.feature'/>
+        <property name='maven-version' value='0.0.9-SNAPSHOT'/>
+        <property name='maven-type' value='eclipse-feature'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.jar' version='0.0.9.202508030827'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.example.sca.feature' version='0.0.9.202508030827'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.example.sca.feature' version='0.0.9.202508030827'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.example.org/license' url='http://www.example.org/license'>
+          This software is provided under the terms of the Eclipse Public License v2.0
+        </license>
+      </licenses>
+      <copyright uri='http://www.example.org/copyright' url='http://www.example.org/copyright'>
+        Copyright (c) 2024 Example Organization. All rights reserved.
+      </copyright>
+    </unit>
     <unit id='org.eclipse.core.databinding.observable' version='1.13.100.v20230708-0916' singleton='false' generation='2'>
       <update id='org.eclipse.core.databinding.observable' range='[0.0.0,1.13.100.v20230708-0916)' severity='0'/>
       <properties size='9'>
@@ -1407,56 +1480,6 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.core.databinding.observable&#xA;Bundle-Version: 1.13.100.v20230708-0916
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='org.example.sca.plugin' version='1.0.0.202508030745' generation='2'>
-      <update id='org.example.sca.plugin' range='[0.0.0,1.0.0.202508030745)' severity='0'/>
-      <properties size='6'>
-        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Plugin'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
-        <property name='maven-groupId' value='org.example'/>
-        <property name='maven-artifactId' value='org.example.sca.plugin'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-        <property name='maven-type' value='eclipse-plugin'/>
-      </properties>
-      <provides size='5'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' version='1.0.0.202508030745'/>
-        <provided namespace='osgi.bundle' name='org.example.sca.plugin' version='1.0.0.202508030745'/>
-        <provided namespace='java.package' name='org.example.sca.plugin' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='org.example.sca.plugin' version='1.0.0.202508030745'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-      </provides>
-      <requires size='7'>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=11))'>
-          <description>
-            org.example.sca.plugin
-          </description>
-        </requiredProperties>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin.source' range='[1.0.0.202508030745,1.0.0.202508030745]' optional='true'>
-          <filter>
-            (org.eclipse.update.install.sources=true)
-          </filter>
-        </required>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='1.0.0.202508030745'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.example.sca.plugin;singleton:=true&#xA;Bundle-Version: 1.0.0.202508030745
           </instruction>
         </instructions>
       </touchpointData>
@@ -3573,9 +3596,9 @@
         <provided namespace='java.package' name='java.awt.desktop' version='0.0.0'/>
         <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
         <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
-        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
-        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.zip' version='0.0.0'/>
+        <provided namespace='java.package' name='java.security.cert' version='0.0.0'/>
         <provided namespace='java.package' name='java.nio.file' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
         <provided namespace='java.package' name='java.time' version='0.0.0'/>
@@ -3592,21 +3615,21 @@
         <provided namespace='java.package' name='com.sun.net.httpserver' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.jdi.connect' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
-        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.datatransfer' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.jdi.event' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.dynalink' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
         <provided namespace='java.package' name='java.net.spi' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.logging' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.dynalink.support' version='0.0.0'/>
         <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.stream' version='0.0.0'/>
-        <provided namespace='java.package' name='jdk.jshell.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.jshell.spi' version='0.0.0'/>
         <provided namespace='java.package' name='java.lang.annotation' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.jfr' version='0.0.0'/>
         <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
@@ -3616,28 +3639,28 @@
         <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
         <provided namespace='java.package' name='java.math' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.geom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
-        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.swing.interop' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt' version='0.0.0'/>
         <provided namespace='java.package' name='java.text' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
         <provided namespace='java.package' name='javax.print' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.security.auth.login' version='0.0.0'/>
         <provided namespace='java.package' name='java.rmi' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.jdi.connect.spi' version='0.0.0'/>
         <provided namespace='java.package' name='java.beans' version='0.0.0'/>
         <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
         <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.prefs' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
         <provided namespace='java.package' name='java.net' version='0.0.0'/>
         <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
@@ -3645,17 +3668,17 @@
         <provided namespace='java.package' name='java.time.format' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.concurrent' version='0.0.0'/>
         <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
         <provided namespace='java.package' name='java.rmi.server' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
-        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
         <provided namespace='java.package' name='javax.net' version='0.0.0'/>
-        <provided namespace='java.package' name='jdk.dynalink.linker' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.function' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.image.renderable' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.dynalink.linker' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.nio.file' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
         <provided namespace='java.package' name='javax.smartcardio' version='0.0.0'/>
@@ -3675,28 +3698,28 @@
         <provided namespace='java.package' name='java.util.concurrent.atomic' version='0.0.0'/>
         <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
-        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
         <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='java.awt.color' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.javadoc.doclet' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
-        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
-        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='java.rmi.registry' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.java.accessibility.util' version='0.0.0'/>
-        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.file.attribute' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.management.jfr' version='0.0.0'/>
         <provided namespace='java.package' name='java.lang.constant' version='0.0.0'/>
         <provided namespace='java.package' name='java.nio' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.jdi.request' version='0.0.0'/>
-        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
         <provided namespace='java.package' name='java.lang.instrument' version='0.0.0'/>
+        <provided namespace='java.package' name='java.lang.ref' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.regex' version='0.0.0'/>
         <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
         <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
@@ -3705,9 +3728,9 @@
         <provided namespace='java.package' name='java.lang.reflect' version='0.0.0'/>
         <provided namespace='java.package' name='java.security' version='0.0.0'/>
         <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
-        <provided namespace='java.package' name='com.sun.tools.attach' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.naming.ldap.spi' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.jshell' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.attach' version='0.0.0'/>
         <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.jshell.tool' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.tools.jconsole' version='0.0.0'/>
@@ -3715,11 +3738,11 @@
         <provided namespace='java.package' name='jdk.security.jarsigner' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.security.auth' version='0.0.0'/>
         <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
         <provided namespace='java.package' name='java.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
         <provided namespace='java.package' name='java.util' version='0.0.0'/>
-        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
         <provided namespace='java.package' name='java.time.temporal' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.channels' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
         <provided namespace='java.package' name='java.nio.charset' version='0.0.0'/>
         <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
@@ -3738,17 +3761,17 @@
         <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.tools.javac' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.jdi' version='0.0.0'/>
-        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.security.jgss' version='0.0.0'/>
-        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.nio.charset.spi' version='0.0.0'/>
         <provided namespace='java.package' name='java.text.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='java.util.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
         <provided namespace='java.package' name='java.security.spec' version='0.0.0'/>
         <provided namespace='java.package' name='java.nio.file.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
         <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
-        <provided namespace='java.package' name='com.sun.source.tree' version='0.0.0'/>
         <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.source.tree' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.font' version='0.0.0'/>
         <provided namespace='java.package' name='java.security.interfaces' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.tools.attach.spi' version='0.0.0'/>
@@ -3759,14 +3782,14 @@
         <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.concurrent.locks' version='0.0.0'/>
-        <provided namespace='java.package' name='jdk.nio.mapmode' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='jdk.nio.mapmode' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.event' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
         <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
         <provided namespace='java.package' name='jdk.jfr.consumer' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.imageio.plugins.tiff' version='0.0.0'/>
         <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.tiff' version='0.0.0'/>
         <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
         <provided namespace='java.package' name='sun.reflect' version='0.0.0'/>
         <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
@@ -3774,8 +3797,8 @@
         <provided namespace='java.package' name='java.lang.runtime' version='0.0.0'/>
         <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.security.auth.module' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
         <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
         <provided namespace='java.package' name='java.time.zone' version='0.0.0'/>
         <provided namespace='java.package' name='netscape.javascript' version='0.0.0'/>
         <provided namespace='java.package' name='java.awt.im.spi' version='0.0.0'/>
@@ -3786,8 +3809,8 @@
         <provided namespace='java.package' name='javax.script' version='0.0.0'/>
         <provided namespace='java.package' name='java.lang.module' version='0.0.0'/>
         <provided namespace='java.package' name='com.sun.source.util' version='0.0.0'/>
-        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
         <provided namespace='java.package' name='java.io' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
         <provided namespace='java.package' name='java.util.jar' version='0.0.0'/>
         <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
         <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
@@ -3935,9 +3958,9 @@
         </provided>
         <provided namespace='org.eclipse.emf.ecore.generated_package' name='org.eclipse.emf.ecore.change_2.15.0.v20230211-1150-1' version='0.0.0'>
           <properties size='3'>
-            <property name='uri' value='http://www.eclipse.org/emf/2003/Change'/>
-            <property name='genModel' value='model/Change.genmodel'/>
             <property name='class' value='org.eclipse.emf.ecore.change.ChangePackage'/>
+            <property name='genModel' value='model/Change.genmodel'/>
+            <property name='uri' value='http://www.eclipse.org/emf/2003/Change'/>
           </properties>
         </provided>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
@@ -4449,40 +4472,6 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='org.example.sca.feature.feature.group' version='1.0.0.202508030745' singleton='false'>
-      <update id='org.example.sca.feature.feature.group' range='[0.0.0,1.0.0.202508030745)' severity='0'/>
-      <properties size='9'>
-        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Feature'/>
-        <property name='org.eclipse.equinox.p2.description' value='SCA Eclipse Plugin Feature - provides SCA scanning capabilities for Eclipse IDE'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.org/description'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-        <property name='maven-groupId' value='org.example'/>
-        <property name='maven-artifactId' value='org.example.sca.feature'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-        <property name='maven-type' value='eclipse-feature'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.group' version='1.0.0.202508030745'/>
-      </provides>
-      <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' range='[1.0.0.202508030745,1.0.0.202508030745]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.jar' range='[1.0.0.202508030745,1.0.0.202508030745]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='http://www.example.org/license' url='http://www.example.org/license'>
-          This software is provided under the terms of the Eclipse Public License v2.0
-        </license>
-      </licenses>
-      <copyright uri='http://www.example.org/copyright' url='http://www.example.org/copyright'>
-        Copyright (c) 2024 Example Organization. All rights reserved.
-      </copyright>
-    </unit>
     <unit id='org.eclipse.jface.databinding' version='1.15.100.v20230708-0916' singleton='false' generation='2'>
       <update id='org.eclipse.jface.databinding' range='[0.0.0,1.15.100.v20230708-0916)' severity='0'/>
       <properties size='9'>
@@ -4594,45 +4583,6 @@
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='org.example.sca.feature.feature.jar' version='1.0.0.202508030745'>
-      <properties size='8'>
-        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Feature'/>
-        <property name='org.eclipse.equinox.p2.description' value='SCA Eclipse Plugin Feature - provides SCA scanning capabilities for Eclipse IDE'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.org/description'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
-        <property name='maven-groupId' value='org.example'/>
-        <property name='maven-artifactId' value='org.example.sca.feature'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-        <property name='maven-type' value='eclipse-feature'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.feature.feature.jar' version='1.0.0.202508030745'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.example.sca.feature' version='1.0.0.202508030745'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.example.sca.feature' version='1.0.0.202508030745'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='http://www.example.org/license' url='http://www.example.org/license'>
-          This software is provided under the terms of the Eclipse Public License v2.0
-        </license>
-      </licenses>
-      <copyright uri='http://www.example.org/copyright' url='http://www.example.org/copyright'>
-        Copyright (c) 2024 Example Organization. All rights reserved.
-      </copyright>
     </unit>
     <unit id='org.eclipse.equinox.p2.metadata' version='2.8.0.v20231102-1258' generation='2'>
       <update id='org.eclipse.equinox.p2.metadata' range='[0.0.0,2.8.0.v20231102-1258)' severity='0'/>
@@ -4799,6 +4749,56 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.swt.win32.win32.x86_64; singleton:=true&#xA;Bundle-Version: 3.124.200.v20231113-1355&#xA;Fragment-Host: org.eclipse.swt;bundle-version=&quot;[3.124.0,4.0.0)&quot;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.example.sca.plugin' version='0.0.9.202508030827' generation='2'>
+      <update id='org.example.sca.plugin' range='[0.0.0,0.0.9.202508030827)' severity='0'/>
+      <properties size='6'>
+        <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Plugin'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
+        <property name='maven-groupId' value='org.example'/>
+        <property name='maven-artifactId' value='org.example.sca.plugin'/>
+        <property name='maven-version' value='0.0.9-SNAPSHOT'/>
+        <property name='maven-type' value='eclipse-plugin'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' version='0.0.9.202508030827'/>
+        <provided namespace='osgi.bundle' name='org.example.sca.plugin' version='0.0.9.202508030827'/>
+        <provided namespace='java.package' name='org.example.sca.plugin' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.example.sca.plugin' version='0.0.9.202508030827'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=11))'>
+          <description>
+            org.example.sca.plugin
+          </description>
+        </requiredProperties>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin.source' range='[0.0.9.202508030827,0.0.9.202508030827]' optional='true'>
+          <filter>
+            (org.eclipse.update.install.sources=true)
+          </filter>
+        </required>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='0.0.9.202508030827'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.example.sca.plugin;singleton:=true&#xA;Bundle-Version: 0.0.9.202508030827
           </instruction>
         </instructions>
       </touchpointData>

@@ -1,65 +1,73 @@
-# Scantist SCA Eclipse Plugin - Maven Tycho Build
+# SCA Eclipse Plugin v0.0.9
 
-A complete Maven Tycho-based Eclipse plugin with SCA scanning functionality, real-time log display, and DevSecOps integration.
+A Maven Tycho-based Eclipse plugin for Software Composition Analysis (SCA) with real-time scanning, live log display, and DevSecOps platform integration.
 
-## Features
-- **SCA Scanning**: Real Software Composition Analysis with live log display
-- **DevSecOps Integration**: Configure tokens and URLs via Eclipse preferences
-- **Professional UI**: Real-time scan logs in dedicated dialog
-- **Eclipse Integration**: Seamless menu and toolbar integration
+## ✨ Features
 
-## Building the Plugin
+- 🔍 **Real-time SCA Scanning**: Live vulnerability detection with instant feedback
+- 📊 **Interactive Log Display**: Professional dialog with real-time scan progress
+- 🔒 **DevSecOps Integration**: Seamless token-based authentication and result upload
+- 🎯 **Eclipse Native**: Full IDE integration with menu, toolbar, and preferences
+- ⚡ **Background Processing**: Non-blocking scans that don't interrupt your workflow
 
-This project should be built using Maven Tycho from CLI:
+## 🚀 Quick Start
 
+### Build & Install
 ```bash
 ./local-deploy.sh
 ```
 
-## Installation & Updates
+Then in Eclipse:
+1. **Help** → **Install New Software...** → **Add** → **Local**
+2. Browse to: `org.example.sca.updatesite/target/repository/`
+3. Install **SCA Tools** and restart Eclipse
 
-### First-Time Installation
-1. Build the plugin using `./local-deploy.sh`
-2. Open Eclipse IDE
-3. Go to **Help** → **Install New Software...**
-4. Click **Add** → **Local**
-5. Browse to: `org.example.sca.updatesite/target/repository/`
-6. Select 'SCA Tools' and install
-7. Restart Eclipse when prompted
-
-### Updating Plugin (Without Uninstall)
-
-**Option 1: Automatic Update (Recommended)**
-1. Rebuild plugin: `./local-deploy.sh`
-2. In Eclipse: **Help** → **Check for Updates**
-3. Select SCA plugin updates and install
-4. Restart Eclipse
-
-**Option 2: Manual Update via Update Site**
-1. Rebuild plugin: `./local-deploy.sh`
-2. In Eclipse: **Help** → **Install New Software...**
-3. Select the existing SCA update site from dropdown
-4. Check **"Contact all update sites during install"**
-5. Select newer version and install
-6. Restart Eclipse
-
-**Option 3: Force Update via Installed Software**
-1. Rebuild plugin: `./local-deploy.sh`
-2. In Eclipse: **Help** → **About Eclipse IDE** → **Installation Details**
-3. Select SCA plugin → **Update...**
-4. Follow wizard to update
-5. Restart Eclipse
-
-### Configuration
-After installation, configure DevSecOps settings:
+### Configure DevSecOps
 1. **Window** → **Preferences** → **SCA Settings**
-2. Set **DevSecOps Token** (your authentication token)
-3. Set **DevSecOps Import URL** (API endpoint)
-4. Click **Apply and Close**
+2. Set your **DevSecOps Token** and **Import URL**
+3. **Apply and Close**
 
-### Usage
+### Run SCA Scan
 1. Open any project in Eclipse
-2. Click **SCA Scan** button in toolbar (or **SCA** menu)
-3. View real-time scan logs in the dialog
-4. Configure DevSecOps integration via preferences
+2. Click **SCA Scan** (toolbar) or **SCA** menu
+3. Monitor real-time scan progress in the dialog
+
+## 🔄 Updates
+
+To update the plugin to a newer version:
+
+**Automatic Update (Recommended)**
+- **Help** → **Check for Updates** → Install SCA updates → Restart
+
+**Manual Update**
+- Rebuild: `./local-deploy.sh`
+- **Help** → **Install New Software...** → Select existing SCA site → Install newer version
+
+## 🛠️ Technical Details
+
+- **Version**: 0.0.9
+- **Build System**: Maven Tycho 4.0.8
+- **Java Version**: 11+
+- **Eclipse Version**: 2023-12+
+- **SCA Engine**: Automated detector with JSON reporting
+
+## 📋 Architecture
+
+```
+├── org.example.sca.plugin/          # Main plugin with SCA logic
+├── org.example.sca.feature/         # Feature packaging
+└── org.example.sca.updatesite/      # P2 update site
+```
+
+## 🔧 Development
+
+**Requirements**: Maven 3.9.9+, Java 11+
+
+**Build**: `./local-deploy.sh` creates update site at:
+`org.example.sca.updatesite/target/repository/`
+
+**Components**:
+- **SCAHelper**: Scan orchestration and DevSecOps integration
+- **SCALogDialog**: Real-time UI with scan controls
+- **SCAPreferences**: Eclipse preferences for configuration
 

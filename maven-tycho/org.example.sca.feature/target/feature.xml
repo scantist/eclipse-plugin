@@ -2,7 +2,7 @@
 <feature
       id="org.example.sca.feature"
       label="SCA Eclipse Feature"
-      version="1.0.0.202508030745"
+      version="0.0.9.202508030827"
       provider-name="Example Organization">
 
    <description url="http://www.example.org/description">
@@ -21,7 +21,7 @@
          id="org.example.sca.plugin"
          download-size="17"
          install-size="33"
-         version="1.0.0.202508030745"
+         version="0.0.9.202508030827"
          unpack="false"/>
 
 </feature>

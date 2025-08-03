@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='org.example.sca.plugin' version='1.0.0.202508030745' generation='2'>
-    <update id='org.example.sca.plugin' range='[0.0.0,1.0.0.202508030745)' severity='0'/>
+  <unit id='org.example.sca.plugin' version='0.0.9.202508030827' generation='2'>
+    <update id='org.example.sca.plugin' range='[0.0.0,0.0.9.202508030827)' severity='0'/>
     <properties size='6'>
       <property name='org.eclipse.equinox.p2.name' value='SCA Eclipse Plugin'/>
       <property name='org.eclipse.equinox.p2.provider' value='Example Organization'/>
       <property name='maven-groupId' value='org.example'/>
       <property name='maven-artifactId' value='org.example.sca.plugin'/>
-      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-version' value='0.0.9-SNAPSHOT'/>
       <property name='maven-type' value='eclipse-plugin'/>
     </properties>
     <provides size='5'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' version='1.0.0.202508030745'/>
-      <provided namespace='osgi.bundle' name='org.example.sca.plugin' version='1.0.0.202508030745'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin' version='0.0.9.202508030827'/>
+      <provided namespace='osgi.bundle' name='org.example.sca.plugin' version='0.0.9.202508030827'/>
       <provided namespace='java.package' name='org.example.sca.plugin' version='0.0.0'/>
-      <provided namespace='osgi.identity' name='org.example.sca.plugin' version='1.0.0.202508030745'>
+      <provided namespace='osgi.identity' name='org.example.sca.plugin' version='0.0.9.202508030827'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -32,20 +32,20 @@
           org.example.sca.plugin
         </description>
       </requiredProperties>
-      <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin.source' range='[1.0.0.202508030745,1.0.0.202508030745]' optional='true'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.example.sca.plugin.source' range='[0.0.9.202508030827,0.0.9.202508030827]' optional='true'>
         <filter>
           (org.eclipse.update.install.sources=true)
         </filter>
       </required>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='1.0.0.202508030745'/>
+      <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='0.0.9.202508030827'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: org.example.sca.plugin;singleton:=true&#xA;Bundle-Version: 1.0.0.202508030745&#xA;
+          Bundle-SymbolicName: org.example.sca.plugin;singleton:=true&#xA;Bundle-Version: 0.0.9.202508030827&#xA;
         </instruction>
       </instructions>
     </touchpointData>

@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='1.0.0.202508030745'>
+  <artifact classifier='osgi.bundle' id='org.example.sca.plugin' version='0.0.9.202508030827'>
     <properties size='9'>
-      <property name='artifact.size' value='18223'/>
-      <property name='download.size' value='18223'/>
-      <property name='download.checksum.sha-512' value='3fc097ffa881f0b3b6c9dbb70ed747d7855fa22360934dc36fec7510cb02c21977afd52d0c757ea4db8adca48ac0160f2416ee17bc61fc2f922da49dc7fcc117'/>
-      <property name='download.checksum.sha-1' value='9158521bd96e0ba3eb1caf90c28d2b0953a4bfa0'/>
-      <property name='download.checksum.sha-256' value='8361cd2df924a3854791dc87d6f3a1b4e7756ea93e633c84319f7070f26eec1d'/>
+      <property name='artifact.size' value='18225'/>
+      <property name='download.size' value='18225'/>
+      <property name='download.checksum.sha-512' value='6d8a1cb6ad3eb6c0ee86401d56259d800559a4bf3245b2d7960331f8b29eddc73ea795790fb028a06b79a838f57704382c0562fd8a99932f8372a4935a5af279'/>
+      <property name='download.checksum.sha-1' value='1b84401e15ca91a6daaaa66d5fac7ab0449fa0cb'/>
+      <property name='download.checksum.sha-256' value='8bee7a2a0ac559987f38b5bac563e3ab35740998bdee1110f712341793a326ee'/>
       <property name='maven-groupId' value='org.example'/>
       <property name='maven-artifactId' value='org.example.sca.plugin'/>
-      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-version' value='0.0.9-SNAPSHOT'/>
       <property name='maven-type' value='eclipse-plugin'/>
     </properties>
   </artifact>

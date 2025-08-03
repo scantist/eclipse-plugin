@@ -2,7 +2,7 @@
 <feature
       id="org.example.sca.feature"
       label="SCA Eclipse Feature"
-      version="1.0.0.qualifier"
+      version="0.0.9.qualifier"
       provider-name="Example Organization">
 
    <description url="http://www.example.org/description">
