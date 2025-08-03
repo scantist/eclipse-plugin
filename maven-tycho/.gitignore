@@ -1,0 +1,42 @@
+# Maven build output
+target/
+
+# Eclipse artifacts
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+
+# Eclipse IDE files
+.metadata
+.project
+.classpath
+.settings/
+*.launch
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# P2 repository artifacts
+p2artifacts.xml
+p2content.xml
+artifacts.xml
+content.xml
+*.xml.xz
