@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.example.sca.feature_1.0.0.qualifier.jar" id="org.example.sca.feature" version="1.0.0.qualifier">
+      <category name="sca"/>
+   </feature>
+   <category-def name="sca" label="SCA Tools">
+      <description>
+         Software Composition Analysis tools for Eclipse IDE
+      </description>
+   </category-def>
+</site>
