@@ -23,7 +23,6 @@ import org.example.sca.plugin.preferences.SCAPreferences;
 public class SCAHelper {
     
     private static final String BOM_DETECT_JAR_NAME = "sca-bom-detect.jar";
-    private static final String BOM_DETECTOR_URL = "https://download.scantist.io/" + BOM_DETECT_JAR_NAME;
     
     private Consumer<String> logCallback;
     
@@ -60,7 +59,12 @@ public class SCAHelper {
             
             log("Downloading SCA detector to: " + targetPath);
             
-            URL url = new URL(BOM_DETECTOR_URL);
+            String bomDetectorUrl = SCAPreferences.getBomDetectorUrl();
+            if (bomDetectorUrl.isEmpty()) {
+                bomDetectorUrl = SCAPreferences.DEFAULT_BOM_DETECTOR_URL;
+            }
+            
+            URL url = new URL(bomDetectorUrl);
             try (InputStream inputStream = url.openStream();
                  FileOutputStream outputStream = new FileOutputStream(targetPath.toFile())) {
                 
@@ -108,6 +112,7 @@ public class SCAHelper {
             command.add(jarPath);
             command.add("-f");
             command.add(projectPath);
+            command.add("-override_report_url");
             command.add("--debug");
             command.add("-report");
             command.add("json");

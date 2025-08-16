@@ -39,6 +39,13 @@ public class SCAPreferencePage extends FieldEditorPreferencePage implements IWor
             "DevSecOps Import URL:",
             getFieldEditorParent()
         ));
+
+        // BOM Detector URL field
+        addField(new StringFieldEditor(
+            SCAPreferences.BOM_DETECTOR_URL,
+            "BOM Detector URL:",
+            getFieldEditorParent()
+        ));
     }
 
     @Override
